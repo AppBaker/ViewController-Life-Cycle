@@ -54,14 +54,38 @@
 		E418BB0E2239266C00B8C7E7 /* Lab ViewController Life Cycle */ = {
 			isa = PBXGroup;
 			children = (
-				E418BB0F2239266C00B8C7E7 /* AppDelegate.swift */,
-				E418BB112239266C00B8C7E7 /* ViewController.swift */,
-				E418BB132239266C00B8C7E7 /* Main.storyboard */,
-				E418BB162239267000B8C7E7 /* Assets.xcassets */,
-				E418BB182239267000B8C7E7 /* LaunchScreen.storyboard */,
+				E418BB2322392AF800B8C7E7 /* Suporting Files */,
+				E418BB2122392AD300B8C7E7 /* Controller */,
+				E418BB2222392AE500B8C7E7 /* View */,
 				E418BB1B2239267000B8C7E7 /* Info.plist */,
 			);
 			path = "Lab ViewController Life Cycle";
+			sourceTree = "<group>";
+		};
+		E418BB2122392AD300B8C7E7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E418BB112239266C00B8C7E7 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		E418BB2222392AE500B8C7E7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E418BB132239266C00B8C7E7 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		E418BB2322392AF800B8C7E7 /* Suporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E418BB0F2239266C00B8C7E7 /* AppDelegate.swift */,
+				E418BB162239267000B8C7E7 /* Assets.xcassets */,
+				E418BB182239267000B8C7E7 /* LaunchScreen.storyboard */,
+			);
+			path = "Suporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -292,7 +316,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "ru.papapp.IvanNikitin.Lab-ViewController-Life-Cycle";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -310,7 +334,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "ru.papapp.IvanNikitin.Lab-ViewController-Life-Cycle";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
