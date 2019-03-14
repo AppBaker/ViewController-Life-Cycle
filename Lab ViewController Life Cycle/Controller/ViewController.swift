@@ -11,30 +11,14 @@ import UIKit
 class ViewController: UIViewController {
 
     //MARK: - ...@IBOutlets
-    @IBOutlet weak var monitorLabel: UILabel!
-    @IBOutlet weak var colorView: UIView!
+    @IBOutlet weak var textView: UITextView!
     
     //MARK: - ...Properties
-    private var messageText = "" {
-        didSet{
-            if monitorLabel != nil {
-            monitorLabel.text = messageText
-            }
-        }
+    static var textMessage = ""
+    override var prefersStatusBarHidden: Bool {
+        return true
     }
-    
-    
-    //MARK:- ...Init
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        addNewMessage()
-    }
-    
-    deinit {
-        addNewMessage()
-    }
-    
-    
+
     //MARK: - ...ViewController Methods
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,6 +33,21 @@ class ViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         addNewMessage()
+        ViewController.textMessage.append("""
+
+
+                                            """)
+        switch title {
+        case "Gray" :
+            tabBarController?.tabBar.tintColor = .gray
+        case "Blue":
+            tabBarController?.tabBar.tintColor = .blue
+        case "Orange":
+            tabBarController?.tabBar.tintColor = .orange
+        default:
+            tabBarController?.tabBar.tintColor = .clear
+        }
+        
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -78,14 +77,14 @@ class ViewController: UIViewController {
     
     //MARK: - ...Methods
     private func addNewMessage(function: String = #function) {
-        let methodWorked = """
+        let newLineOfMessage = """
         
         \(title ?? ""): \(function)
         """
-        messageText = messageText + methodWorked
+        ViewController.textMessage.append(newLineOfMessage)
+        textView?.text = ViewController.textMessage
+        textView?.scrollRangeToVisible(NSMakeRange(textView.text.count, 1))
         
-        print(methodWorked)
     }
-    
 }
 
