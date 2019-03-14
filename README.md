@@ -2,6 +2,9 @@
 ![Language](https://img.shields.io/badge/language-Swift%204-orange.svg)
 The app shows the sequence of calling methods in UIViewController
 
+![](https://github.com/Ivan3337/Lab-ViewController-Life-Cycle/raw/master/ViewLifeCycle.gif)
+
+
 ```swift
     viewDidLoad()
     viewWillAppear(_ animated: Bool)
@@ -14,5 +17,3 @@ The app shows the sequence of calling methods in UIViewController
     viewWillAppear(_ animated: Bool)
     viewWillAppear(_ animated: Bool)
     ```
-    
-    
